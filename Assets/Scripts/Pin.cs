@@ -19,11 +19,14 @@ public class Pin : MonoBehaviour
     {
         if (collision.tag == "Rotator")
         {
-            Debug.Log("hi");
+      
             isPinned = true;
-            rb.velocity = Vector2.zero; // Ensure the pin stops moving
-            rb.isKinematic = true; // Make Rigidbody kinematic to stop all physics interactions
             transform.SetParent(collision.transform);
+        }
+
+        else if (collision.tag == "Pin")
+        {
+            FindObjectOfType<GameManager>().EndGame();
         }
     }
 
