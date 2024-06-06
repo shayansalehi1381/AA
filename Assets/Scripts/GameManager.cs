@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
 
     public void RestartGame()
     {
-        Camera.main.backgroundColor = Color.white;
+       // Camera.main.backgroundColor = Color.white;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
     }

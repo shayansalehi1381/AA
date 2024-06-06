@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class Pin : MonoBehaviour
 {
@@ -19,8 +20,10 @@ public class Pin : MonoBehaviour
     {
         if (collision.tag == "Rotator")
         {
-      
+           
             isPinned = true;
+            Score.score++;
+            
             transform.SetParent(collision.transform);
         }
 
